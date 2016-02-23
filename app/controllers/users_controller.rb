@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   def index
   end
 
+  def show
+    @user = User.find(params[:id])
+  end
+
   def new
     @user = User.new
   end
@@ -13,7 +17,7 @@ class UsersController < ApplicationController
     if @user.save
       redirect_to user_path(@user.id), notice: "Welcome to Crowdfunder"
     else
-      render :new
+      render "new"
     end
 
   end
@@ -24,7 +28,7 @@ class UsersController < ApplicationController
   def edit
   end
 
-  private
+  private 
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)
