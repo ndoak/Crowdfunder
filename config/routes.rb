@@ -13,7 +13,8 @@ Rails.application.routes.draw do
 
   get 'pledges/create'
 
-resource :users
+resources :users
+
 
   get 'projects/index'
 
