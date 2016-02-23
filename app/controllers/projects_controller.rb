@@ -8,7 +8,7 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    @project = Project.new(private_params)
+    @project = Project.new(project_params)
 
     if @project.save
       redirect_to projects_path, notice: "Project Saved!"
@@ -30,7 +30,7 @@ class ProjectsController < ApplicationController
 private
   def project_params
     params.require(:project)
-          .permit(:title, :description, :goal, :end_date)
+          .permit(:title, :description, :funding_goal, :start_date, :end_date)
           # rewards_attributes[:title,:description,:amount])
   end
 end

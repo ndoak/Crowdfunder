@@ -1,2 +1,12 @@
-<h1>Projects#index</h1>
-<p>Find me in app/views/projects/index.html.erb</p>
+<h1>Projects</h1>
+<%= link_to 'New Project', new_project_path %>
+
+<% if @projects.any? %>
+  <ul>
+    <% @projects.each do |project| %>
+      <li class = "project">
+        <%= link_to project.title, project_path(project) %>
+      </li>
+    <% end %>
+  </ul>
+<% end %>
