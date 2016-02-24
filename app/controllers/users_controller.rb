@@ -1,7 +1,5 @@
 class UsersController < ApplicationController
-
-  def index
-  end
+  skip_before_action :require_login, only: [:index, :new, :create]
 
   def show
     @user = User.find(params[:id])
@@ -15,7 +13,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to user_path(@user.id), notice: "Welcome to Crowdfunder"
+      redirect_to(:users, notice: 'User was sucessfully created')
     else
       render "new"
     end
@@ -28,7 +26,7 @@ class UsersController < ApplicationController
   def edit
   end
 
-  private 
+  private
 
   def user_params
     params.require(:user).permit(:email, :password, :password_confirmation)

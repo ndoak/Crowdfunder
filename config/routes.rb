@@ -1,32 +1,6 @@
 Rails.application.routes.draw do
-  get 'sessions/index'
-
-  get 'sessions/new'
-
-  get 'sessions/create'
-
-  get 'sessions/destroy'
-
-  get 'pledges/index'
-
-  get 'pledges/new'
-
-  get 'pledges/create'
-
 resources :users
-
-
-  get 'projects/index'
-
-  get 'projects/new'
-
-  get 'projects/create'
-
-  get 'projects/edit'
-
-  get 'projects/update'
-
-  get 'projects/destroy'
+resources :sessions
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
