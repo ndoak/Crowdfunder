@@ -13,6 +13,6 @@
   <p><%= reward.description %></p>
   <p id="reward_amount"> <%= reward.amount %></p>
 
-  <%= link_to "Donate!", donate_path(@project.id, reward.id), method: "post" , id: "donate"%>
+  <%= link_to "Donate!", donate_path(@project.id, reward.id), method: "post" , class: "donate"%>
 
 <% end %>

@@ -3,13 +3,14 @@
 // You can use CoffeeScript in this file: http://coffeescript.org/
 $(document).on("ready page:load", function(){
 
-  $("#donate").on('click', function(e){
+  $(".donate").on('click', function(e){
 
     e.preventDefault();
+    e.stopPropagation();
 
     $.ajax({
       url:$(this).attr('href'),
-      type: 'POST',
+      method: 'POST',
       success: function(data){
         console.log(data);
         if (data){
