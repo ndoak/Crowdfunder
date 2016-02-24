@@ -4,6 +4,9 @@ resources :projects
 resources :users
 resources :sessions, only: [:new, :create, :destroy]
 
+post '/projects/:id/rewards/:reward_id/donate' => "projects#donate", as: "donate"
+
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

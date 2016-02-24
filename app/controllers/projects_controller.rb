@@ -17,6 +17,10 @@ class ProjectsController < ApplicationController
     end
   end
 
+  def show
+    @project = Project.find(params[:id])
+  end
+
   def edit
   end
 
@@ -24,6 +28,13 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
+  end
+
+  def donate
+    @project = Project.find(params[:id])
+    reward = Reward.find(params[:reward_id])
+    @project.update_funding_goal(@project.funding_goal, reward.amount)
+    render partial: "funding_goal"
   end
 
 

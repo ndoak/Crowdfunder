@@ -1,0 +1,18 @@
+<%= link_to "Back to all projects", projects_url %>
+
+<h2><%= @project.title %></h2>
+<p><%= @project.description %> </p>
+<div id="new_goal">
+<%= render "funding_goal" %>
+</div>
+<p><%= @project.start_date %></p>
+<p><%= @project.end_date %></p>
+
+<% @project.rewards.each do |reward| %>
+  <h3><%= reward.title %></h3>
+  <p><%= reward.description %></p>
+  <p id="reward_amount"> <%= reward.amount %></p>
+
+  <%= link_to "Donate!", donate_path(@project.id, reward.id), method: "post" , id: "donate"%>
+
+<% end %>
