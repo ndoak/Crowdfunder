@@ -1,0 +1,11 @@
+@mixin size($width, $height: $width){
+  width: $width;
+  height: $height;
+}
+@mixin fixed($args){
+  @include position("fixed", $args);
+}
+
+@mixin absolute($args){
+  @include position("absolute", $args);
+}
