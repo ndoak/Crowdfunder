@@ -1,11 +1,10 @@
 <h1>Welcome to Your Profile Page</h1>
 
-<<<<<<< HEAD
-<p> The time left on your project is
-<!-- loop throgh back projects and call time left -->
+<!-- loop throgh owned projects and call time left -->
 
- </p>
-=======
-<p><strong>Email:</strong><%= @user.email %></p>
-<%= link_to 'Edit Account', edit_user_path(@user) %>
->>>>>>> 075e2de433c5521f155110be8f6da1c15bc353d2
+  <% @user.owned_projects.each do |project| %>
+  <p>
+  <%= "Name of project is #{project.title} time remaining is
+  #{distance_of_time_in_words(project.end_date,project.start_or_now)}"%>
+</p>
+  <% end %>

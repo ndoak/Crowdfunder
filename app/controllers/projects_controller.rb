@@ -13,8 +13,8 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+    @project.owner = current_user
     authorize! :manage, @project
-
     if @project.save
       redirect_to projects_path, notice: "Project Saved!"
     else
