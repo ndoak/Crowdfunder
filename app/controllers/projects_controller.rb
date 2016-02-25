@@ -1,20 +1,27 @@
 class ProjectsController < ApplicationController
+  # load_and_authorize_resource
+
+
   def index
     @projects = Project.all
   end
 
   def new
     @project = Project.new
+    authorize! :manage, @project
   end
 
   def create
     @project = Project.new(project_params)
+    authorize! :manage, @project
 
     if @project.save
       redirect_to projects_path, notice: "Project Saved!"
     else
       render :new
     end
+
+
   end
 
   def show
