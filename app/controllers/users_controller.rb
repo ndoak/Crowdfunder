@@ -4,7 +4,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
 
-    user_project = @user.projects.find(params[:id])
+
+    @project = Project.find(params[:id]).where(@user.id == @project.user_id)
+
 
     # start_day = user_time.start_date
     # last_day = user_time.end_date
