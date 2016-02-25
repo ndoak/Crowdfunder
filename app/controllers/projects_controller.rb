@@ -20,8 +20,6 @@ class ProjectsController < ApplicationController
     else
       render :new
     end
-
-
   end
 
   def show
@@ -48,7 +46,7 @@ class ProjectsController < ApplicationController
 private
   def project_params
     params.require(:project)
-          .permit(:title, :description, :funding_goal, :start_date, :end_date, 
+          .permit(:title, :description, :funding_goal, :start_date, :end_date,
           rewards_attributes:[ :title, :description, :amount, :_destroy])
   end
 end

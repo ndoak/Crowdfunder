@@ -1,5 +1,6 @@
 <h1>Welcome to Your Profile Page</h1>
 
+
 <p><strong>Email:</strong><%= @user.email %></p>
 <%= link_to 'Edit Account', edit_user_path(@user) %>
 
@@ -8,12 +9,14 @@
 
     <%= @user.email %>
 
-    <p> The time left on your project is
-    <!-- loop throgh back projects and call time left -->
 
-  </p>
-
+  <% @user.owned_projects.each do |project| %>
+    <p>
+      <%= "Name of project is #{project.title} time remaining is
+      #{distance_of_time_in_words(project.end_date,project.start_or_now)}"%>
+    </p>
   <h1>Projects You've donated to</h1>
+  <% end %>
 
 <% elsif can? :read, Project %>
 
@@ -22,4 +25,3 @@
 <% else %>
   <p>you should not see this</p>
 <% end %>
-<p>testing</p>
