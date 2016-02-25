@@ -15,9 +15,10 @@ class ProjectsController < ApplicationController
     @project = Project.new(project_params)
     @project.owner = current_user
     authorize! :manage, @project
-    if @project.save
+    if @project.save 
       redirect_to projects_path, notice: "Project Saved!"
     else
+      flash[:notice] = "Did you fill out EVERYTHING?"
       render :new
     end
 
