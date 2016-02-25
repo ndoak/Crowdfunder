@@ -25,4 +25,6 @@ class User < ActiveRecord::Base
     roles.include?(role)
   end
 
+
+
 end
