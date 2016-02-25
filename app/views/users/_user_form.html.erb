@@ -1,0 +1,37 @@
+<%= form_for @user do |f| %>
+  <% if @user.errors.any? %>
+    <div calss="error_messages">
+      <h2>Form Is Invalid</h2>
+      <ul>
+        <% @user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.email_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password %>
+    <%= f.password_field :password %>
+  </div>
+
+  <div class="field">
+    <%= f.label :password_confirmation %>
+    <%= f.password_field :password_confirmation %>
+  </div>
+
+  <% for role in User::ROLES %>
+    <%= check_box_tag "user[roles][#{role}]", role, @user.roles.include?(role), {:name => "user[roles][]"}%>
+    <%= label_tag "user_roles_#{role}", role.to_s.humanize %><br />
+  <% end %>
+  <%= hidden_field_tag "user[roles][]", "" %>
+
+  <div class="action">
+    <%= f.submit %>
+  </div>
+ <% end %>
