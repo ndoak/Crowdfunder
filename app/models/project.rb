@@ -1,6 +1,6 @@
 class Project < ActiveRecord::Base
   has_many :rewards
-  belongs_to :owner, foreign_key: "user_id"
+  belongs_to :owner, class_name: User, foreign_key: "user_id"
   accepts_nested_attributes_for :rewards, reject_if: :all_blank, allow_destroy: true
 
   def update_funding_goal(goal, reward_amount)
@@ -8,8 +8,8 @@ class Project < ActiveRecord::Base
     self.funding_goal = new_goal
     self.save
   end
-
-  def time_left()
-    remaining_time = end_date - start_date
+  def start_or_now()
+    [start_date, DateTime.now].max
   end
+
 end
