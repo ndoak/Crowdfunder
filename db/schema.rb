@@ -11,7 +11,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160224231754) do
+
+ActiveRecord::Schema.define(version: 20160225205743) do
+
 
   create_table "pledges", force: :cascade do |t|
     t.integer  "amount"
@@ -30,7 +32,10 @@ ActiveRecord::Schema.define(version: 20160224231754) do
     t.datetime "end_date"
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
+    t.integer  "user_id"
   end
+
+  add_index "projects", ["user_id"], name: "index_projects_on_user_id"
 
   create_table "rewards", force: :cascade do |t|
     t.string   "title"
@@ -39,9 +44,11 @@ ActiveRecord::Schema.define(version: 20160224231754) do
     t.integer  "project_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
+    t.integer  "user_id"
   end
 
   add_index "rewards", ["project_id"], name: "index_rewards_on_project_id"
+  add_index "rewards", ["user_id"], name: "index_rewards_on_user_id"
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                           null: false
