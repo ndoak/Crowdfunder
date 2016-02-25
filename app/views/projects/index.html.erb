@@ -1,5 +1,8 @@
 <h1>Projects</h1>
-<%= link_to 'New Project', new_project_path %>
+
+<% if can? :create, Project %>
+  <%= link_to 'New Project', new_project_path %>
+<% end %>
 
 <% if @projects.any? %>
   <ul>
