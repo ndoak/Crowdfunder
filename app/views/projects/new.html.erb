@@ -1,4 +1,4 @@
-
+<div class="sign-in">
 
 <h1>New Project </h1>
 
@@ -15,27 +15,27 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class='sign-in-field'>
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
 
-  <div class="field">
+  <div class='sign-in-field'>
     <%= f.label :description %>
     <%=f.text_area :description %>
   </div>
 
-  <div class="field">
+  <div class='sign-in-field'>
     <%=f.label :funding_goal %>
     <%=f.number_field :funding_goal %>
   </div>
 
-  <div class="field">
+  <div class='sign-in-field'>
     <%= f.label :start_date %>
     <%= f.date_field :start_date %>
   </div>
 
-  <div class="field">
+  <div class='sign-in-field'>
     <%= f.label :end_date %>
     <%= f.date_field :end_date %>
   </div>
@@ -63,3 +63,5 @@
   </div>
 
 <% end %>
+
+</div>

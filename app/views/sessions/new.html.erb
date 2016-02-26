@@ -1,22 +1,24 @@
+<div class="sign-in">
 <h1>Log in</h1>
 
 <% unless current_user %>
   <%= form_tag sessions_path do %>
 
-    <div class='field'>
+    <div class='sign-in-field'>
       <%= label_tag :email %>
       <%= text_field_tag :email, params[:email] %>
     </div>
 
-    <div class='field'>
+    <div class='sign-in-field'>
       <%= label_tag :password %>
       <%= password_field_tag :password %>
     </div>
 
-    <div class='action'>
-      <%= submit_tag 'Log in' %>
+    <div class='sign-in-action'>
+      <%= submit_tag 'Log me in!' %>
     </div>
     <% end %>
   <% else %>
     <p>Already Logged in! </p>
   <% end %>
+</div>

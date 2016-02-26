@@ -2,9 +2,12 @@ class Project < ActiveRecord::Base
 
 
   has_many :rewards
-  has_many :pledges
+
+  has_many :pledges, through: :rewards
   belongs_to :owner, class_name: User, foreign_key: "user_id"
   belongs_to :category 
+
+
 
   accepts_nested_attributes_for :rewards, reject_if: :all_blank, allow_destroy: true
   validates_presence_of :title, :description, :funding_goal, :start_date, :end_date, :category
@@ -14,7 +17,6 @@ class Project < ActiveRecord::Base
   def start_or_now()
     [start_date, DateTime.now].max
   end
-
 
   def update_funding_goal(reward_amount)
     new_goal = self.funding_goal - reward_amount
@@ -30,8 +32,11 @@ class Project < ActiveRecord::Base
       else
         return false
       end
+    end
 
-  end
+    def money_raised()
+      self.pledges.sum(:amount)
+    end
 
 
   private

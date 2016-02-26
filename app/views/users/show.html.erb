@@ -1,16 +1,33 @@
+<div class="user-profile">
 <h1>Welcome to Your Profile Page</h1>
 
+
+<h2>Your projects</h2>
+
   <% @user.owned_projects.each do |project| %>
-  <p>
-  <%= "Name of project is #{project.title} time remaining is
-  #{distance_of_time_in_words(project.end_date,project.start_or_now)}"%>
-</p>
+  <ul>
+    <li><%= "Name of project is #{project.title}" %>
+    <li><%= "time remaining on this project is
+    #{distance_of_time_in_words(project.end_date,project.start_or_now)}"%></li>
+    <li><%= "Your project has raised $ #{project.money_raised}" %></li>
+</ul>
   <% end %>
 
+<h2>Your Profile</h2>
 <p><strong>Email:</strong><%= @user.email %></p>
 <%= link_to 'Edit Account', edit_user_path(@user) %>
+
+
+<h1>You Backed</h1>
+<%  @user_backedprojects.each do |project| %>
+<p>  <%= "You have backed #{project.title}" %> </p>
+  <% end %>
+
+<p>The total amount you have spent on each project was $<b><%= @total_pleged %></b>.</p>
+
 
 <h1>Projects you own</h1>
 <p><% @owned_projects.each do |project| %>
   <%= "You owned #{project.title}" %>
 <% end %> </p>
+</div>
