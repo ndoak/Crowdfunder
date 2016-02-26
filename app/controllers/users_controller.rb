@@ -1,10 +1,11 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:index, :new, :create]
-  
+
   def show
     @user = User.find(params[:id])
     @owned_projects = @user.owned_projects
-    # @backed_projects =  @user.backed_projects
+    @user_backedprojects = @user.backed_projects
+
   end
 
   def new
