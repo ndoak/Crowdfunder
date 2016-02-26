@@ -20,3 +20,5 @@
 <%  @user_backedprojects.each do |project| %>
 <p>  <%= "You have backed #{project.title}" %> </p>
   <% end %>
+
+<p>The total amount you have spent on each project was $<b><%= @total_pleged %></b>.</p>

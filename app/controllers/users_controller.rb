@@ -5,6 +5,8 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
     @owned_projects = @user.owned_projects
     @user_backedprojects = @user.backed_projects
+    @total_pleged = @user.pledges.sum(:amount)
+
 
   end
 
