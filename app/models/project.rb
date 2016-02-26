@@ -5,9 +5,9 @@ class Project < ActiveRecord::Base
 
   has_many :pledges, through: :rewards
   belongs_to :owner, class_name: User, foreign_key: "user_id"
-  belongs_to :category 
+  belongs_to :category
 
-
+  before_destroy :can_destroy
 
   accepts_nested_attributes_for :rewards, reject_if: :all_blank, allow_destroy: true
   validates_presence_of :title, :description, :funding_goal, :start_date, :end_date, :category
@@ -38,6 +38,13 @@ class Project < ActiveRecord::Base
       self.pledges.sum(:amount)
     end
 
+    def can_destroy
+
+      return true if self.pledges.empty?
+      errors.add :base, "Cannot delete a project with pledges"
+      false
+
+    end
 
   private
     def end_date_is_after_start_date

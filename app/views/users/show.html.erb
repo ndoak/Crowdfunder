@@ -19,7 +19,7 @@
 
 
 <h1>You Backed</h1>
-<%  @user_backedprojects.each do |project| %>
+<%  @user.backed_projects.each do |project| %>
 <p>  <%= "You have backed #{project.title}" %> </p>
   <% end %>
 
@@ -27,7 +27,8 @@
 
 
 <h1>Projects you own</h1>
-<p><% @owned_projects.each do |project| %>
-  <%= "You owned #{project.title}" %>
+<p><% @user.owned_projects.each do |project| %>
+  <p><%= "You owned #{project.title}" %>  <%= link_to "Delete", project_path(project), method: :delete, data:
+  {confirm: 'Are you sure you want to delete this project?'}%> </p>
 <% end %> </p>
 </div>
