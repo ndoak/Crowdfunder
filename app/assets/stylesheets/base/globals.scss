@@ -251,11 +251,17 @@ html{
 	padding-right: 2.5rem;
 	padding-top: 1.2rem;
 }
-<<<<<<< HEAD
+
 .user-profile{
   margin-left: 15%;
   width: 70%;
-=======
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 5%;
+}
 
 .project-show-page{
   margin-left: 32.5%;
@@ -269,7 +275,9 @@ html{
 
 }
 .user-profile h1{
-
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
 }
 
 .project-show-page h2{
@@ -288,6 +296,9 @@ html{
 }
 
 .user-profile a, .user-profile a:visited{
+
+
+}
 #user-email{
   list-style: none;
   font-size: 1rem;
