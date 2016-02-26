@@ -1,5 +1,16 @@
 <%= link_to "Back to all projects", projects_url %>
 
+  <% if @project.errors.any? %>
+    <div class="error_messages">
+      <h2>Project Is Over</h2>
+      <ul>
+        <% @project.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
 <h2><%= @project.title %></h2>
 <p> <%=  @user_project.email %></p>
 <p><%= @project.description %> </p>
