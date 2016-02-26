@@ -1,6 +1,7 @@
 <%= link_to "Back to all projects", projects_url %>
 
 <h2><%= @project.title %></h2>
+<p> <%=  @user_project.email %></p>
 <p><%= @project.description %> </p>
 <div id="new_goal">
 <%= render "funding_goal" %>

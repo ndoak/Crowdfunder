@@ -3,7 +3,11 @@ class User < ActiveRecord::Base
   has_many :pledges
   has_many :owned_projects, class_name: 'Project'
   has_many :backed_projects, class_name: 'Project', through: :rewards
+<<<<<<< HEAD
   has_many :pledges
+=======
+  has_many :rewards
+>>>>>>> backer
 
   validates :password, confirmation: true
   validates :email, confirmation: true
