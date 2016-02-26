@@ -8,7 +8,7 @@
     <li><%= "Name of project is #{project.title}" %>
     <li><%= "time remaining on this project is
     #{distance_of_time_in_words(project.end_date,project.start_or_now)}"%></li>
-    <li><%= "Your project has raised ${}" %></li>
+    <li><%= "Your project has raised $ #{project.money_raised}" %></li>
 </ul>
   <% end %>
 

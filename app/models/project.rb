@@ -2,7 +2,7 @@ class Project < ActiveRecord::Base
 
 
   has_many :rewards
-  has_many :pledges
+  has_many :pledges, through: :rewards
   belongs_to :owner, class_name: User, foreign_key: "user_id"
 
   accepts_nested_attributes_for :rewards, reject_if: :all_blank, allow_destroy: true
@@ -30,10 +30,9 @@ class Project < ActiveRecord::Base
       end
     end
 
-      def money_rasied()
-
-      end
-
+    def money_raised()
+      self.pledges.sum(:amount)
+    end
 
 
   private
