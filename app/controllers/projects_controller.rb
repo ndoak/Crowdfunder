@@ -29,7 +29,7 @@ class ProjectsController < ApplicationController
     @project = Project.find(params[:id])
     @user_project = User.find(@project.user_id)
 
-    @project.project_expire()
+    expire = @project.project_expire()
   end
 
   def edit

@@ -2,24 +2,11 @@
 // All this logic will automatically be available in application.js.
 // You can use CoffeeScript in this file: http://coffeescript.org/
 // $(document).on("ready page:load", function(){
-// if project_expire()
-//   $(".new_pledge").on('submit', function(e){
 //
-//     e.preventDefault();
-//     e.stopPropagation();
-//
-//     $.ajax({
-//       url:$(this).attr('action'),
-//       method: 'POST',
-//       success: function(data){
-//         if (data){
-//           $("#new_goal").html(data);
-//
-//           alert("Thanks!");
-//         }
-//
-//       }
-//
-//     });
+//     if expire === true {
+//       $(".donate").on('submit', function(e){
+//         e.preventDefault();
+//         e.stopPropagation();
 //   });
+//  }
 // });
