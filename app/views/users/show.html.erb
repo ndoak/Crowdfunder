@@ -15,3 +15,8 @@
 <h2>Your Profile</h2>
 <p><strong>Email:</strong><%= @user.email %></p>
 <%= link_to 'Edit Account', edit_user_path(@user) %>
+
+<h1>You Backed</h1>
+<%  @user_backedprojects.each do |project| %>
+<p>  <%= "You have backed #{project.title}" %> </p>
+  <% end %>

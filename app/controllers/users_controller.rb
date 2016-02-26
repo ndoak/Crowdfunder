@@ -3,9 +3,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-
     @owned_projects = @user.owned_projects
-    # @backed_projects =  @user.backed_projects
+    @user_backedprojects = @user.backed_projects
 
   end
 
