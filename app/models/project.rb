@@ -22,10 +22,7 @@ class Project < ActiveRecord::Base
   end
 
   def project_expire()
-    if DateTime.now >= end_date
-      errors.add(:end_date, "Project is over")
-    else
-    end
+    DateTime.now >= end_date ? true : false
   end
 
   private
