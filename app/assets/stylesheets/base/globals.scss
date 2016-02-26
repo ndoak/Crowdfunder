@@ -282,6 +282,24 @@ html{
   text-align: center;
 }
 
+.user-profile h2{
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+.user-profile ul{
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  color: #0f2105;
+}
+
+.user-profile li{
+  text-align: center;
+  padding-right: 5%;
+}
+
 .project-show-page h2{
   font-family: 'Open Sans';
   color: #2bde73;
@@ -289,7 +307,6 @@ html{
 }
 
 .user-profile p{
-  padding-right: 2%;
   font-family: 'Open Sans';
   font-weight: 400;
   color: #0f2105;
@@ -302,7 +319,7 @@ html{
   font-family: 'Open Sans';
   font-size: 1rem;
   color: #00a0ff;
-  margin-left: 43%;
+  margin-left: 45%;
 
 }
 #user-email{
