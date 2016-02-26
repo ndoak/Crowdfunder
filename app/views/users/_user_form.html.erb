@@ -1,6 +1,6 @@
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
-    <div calss="error_messages">
+    <div class="error_messages">
       <h2>Form Is Invalid</h2>
       <ul>
         <% @user.errors.full_messages.each do |message| %>
@@ -10,28 +10,30 @@
     </div>
   <% end %>
 
-  <div class="field">
+  <div class='sign-up-field'>
     <%= f.label :email %>
     <%= f.email_field :email %>
   </div>
 
-  <div class="field">
+  <div class='sign-up-field'>
     <%= f.label :password %>
     <%= f.password_field :password %>
   </div>
 
-  <div class="field">
+  <div class='sign-up-confirm-field'>
     <%= f.label :password_confirmation %>
     <%= f.password_field :password_confirmation %>
   </div>
+  <p id='checkbox-tag'>Check any that apply:</p>
+  <div class="checkbox">
+    <% for role in User::ROLES %>
+      <%= check_box_tag "user[roles][#{role}]", role, @user.roles.include?(role), {:name => "user[roles][]"}%>
+      <%= label_tag "user_roles_#{role}", role.to_s.humanize %><br />
+    <% end %>
+    <%= hidden_field_tag "user[roles][]", "" %>
+  </div>
 
-  <% for role in User::ROLES %>
-    <%= check_box_tag "user[roles][#{role}]", role, @user.roles.include?(role), {:name => "user[roles][]"}%>
-    <%= label_tag "user_roles_#{role}", role.to_s.humanize %><br />
-  <% end %>
-  <%= hidden_field_tag "user[roles][]", "" %>
-
-  <div class="action">
+  <div class='sign-in-action'>
     <%= f.submit %>
   </div>
  <% end %>
