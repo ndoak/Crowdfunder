@@ -14,9 +14,10 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     @project.owner = current_user
+
     authorize! :manage, @project
     if @project.save
-      redirect_to projects_path, notice: "Project Saved!"
+      redirect_to category_path(@project.category), notice: "Project Saved!"
     else
       flash[:notice] = "Did you fill out EVERYTHING?"
       render :new
@@ -54,7 +55,7 @@ class ProjectsController < ApplicationController
 private
   def project_params
     params.require(:project)
-          .permit(:title, :description, :funding_goal, :start_date, :end_date,
+          .permit(:title, :description, :funding_goal, :start_date, :end_date, :category_id,
           rewards_attributes:[ :title, :description, :amount, :_destroy])
   end
 end
