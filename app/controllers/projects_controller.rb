@@ -30,6 +30,7 @@ class ProjectsController < ApplicationController
     @user_project = User.find(@project.user_id)
 
     expire = @project.project_expire()
+    @project.money_raised()
   end
 
   def edit
