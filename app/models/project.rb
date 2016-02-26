@@ -14,7 +14,6 @@ class Project < ActiveRecord::Base
     [start_date, DateTime.now].max
   end
 
-
   def update_funding_goal(reward_amount)
     new_goal = self.funding_goal - reward_amount
     self.funding_goal = new_goal
@@ -29,12 +28,12 @@ class Project < ActiveRecord::Base
       else
         return false
       end
-
+    end
 
       def money_rasied()
 
       end
-  end
+
 
 
   private

@@ -1,6 +1,6 @@
 <%= form_for @user do |f| %>
   <% if @user.errors.any? %>
-    <div calss="error_messages">
+    <div class="error_messages">
       <h2>Form Is Invalid</h2>
       <ul>
         <% @user.errors.full_messages.each do |message| %>
