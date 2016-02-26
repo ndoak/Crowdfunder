@@ -2,11 +2,10 @@ class UsersController < ApplicationController
   skip_before_action :require_login, only: [:index, :new, :create]
 
   def show
-    @user = User.find(params[:id])
-
+    @user = User.find(current_user)
     @owned_projects = @user.owned_projects
-    # @backed_projects =  @user.backed_projects
-
+    @user_backedprojects = @user.backed_projects
+    @total_pleged = @user.pledges.sum(:amount)
   end
 
   def new
@@ -17,7 +16,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to(:users, notice: 'User was sucessfully created')
+      redirect_to(:projects)
     else
       render "new"
     end
