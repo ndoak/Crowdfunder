@@ -1,10 +1,15 @@
 Rails.application.routes.draw do
 root 'users#index'
+
 resources :projects
+
+resources :rewards do
+  resources :pledges, only: [:new, :create]
+end
+
 resources :users
 resources :sessions, only: [:new, :create, :destroy]
 
-post '/projects/:id/rewards/:reward_id/donate' => "projects#donate", as: "donate"
 
 
   # The priority is based upon order of creation: first created -> highest priority.

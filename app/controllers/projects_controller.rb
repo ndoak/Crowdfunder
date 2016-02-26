@@ -39,8 +39,8 @@ class ProjectsController < ApplicationController
 
   def donate
     @project = Project.find(params[:id])
-    reward = Reward.find(params[:reward_id])
-    @project.update_funding_goal(@project.funding_goal, reward.amount)
+    @reward = Reward.find(params[:reward_id])
+    @project.update_funding_goal(@project.funding_goal, @reward.amount)
     render partial: "funding_goal"
   end
 
