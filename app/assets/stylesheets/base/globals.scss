@@ -234,17 +234,18 @@ html{
   font-weight: 400;
   color: #abaeae;
 }
+
 .error_messages h2{
   font-family: 'Open Sans';
   color: #2bde73;
   padding-left: 5%;
 }
+
 .error_messages ul{
 	list-style: none;
 	font-size: 1rem;
   font-family: 'Open Sans';
   color: #0f2105;
-
 }
 
  .error_messages li{
@@ -261,6 +262,7 @@ html{
   border-radius: 10px;
   background-color: white;
   padding-bottom: 5%;
+
 }
 
 .project-show-page{
@@ -272,8 +274,8 @@ html{
   border-radius: 10px;
   background-color: white;
   padding-bottom: 5%;
-
 }
+
 .user-profile h1{
   font-family: 'Open Sans';
   color: #2bde73;
@@ -296,7 +298,11 @@ html{
 }
 
 .user-profile a, .user-profile a:visited{
-
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+  margin-left: 43%;
 
 }
 #user-email{

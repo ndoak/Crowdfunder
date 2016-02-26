@@ -16,12 +16,18 @@
 <h2>Your Profile</h2>
 <p><strong>Email:</strong><%= @user.email %></p>
 <%= link_to 'Edit Account', edit_user_path(@user) %>
-<<<<<<< HEAD
+
+
+<h1>You Backed</h1>
+<%  @user_backedprojects.each do |project| %>
+<p>  <%= "You have backed #{project.title}" %> </p>
+  <% end %>
+
+<p>The total amount you have spent on each project was $<b><%= @total_pleged %></b>.</p>
+
 
 <h1>Projects you own</h1>
 <p><% @owned_projects.each do |project| %>
   <%= "You owned #{project.title}" %>
 <% end %> </p>
 </div>
-=======
->>>>>>> e3cf7b22f30a2256c5e41cd36f2133eaaeeb4f34
