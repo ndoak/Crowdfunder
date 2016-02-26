@@ -40,6 +40,11 @@
     <%= f.date_field :end_date %>
   </div>
 
+  <div class = "field">
+    <%= f.label :category %>
+    <%= f.collection_select(:category_id, Category.all, :id, :name, {:include_blank => "Please Select"})%>
+  </div>
+
 
   <h2>Rewards</h2>
     <div id="rewards">

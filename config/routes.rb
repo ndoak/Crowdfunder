@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
 root 'users#index'
-
+resources :categories, only: [:index, :show] 
 resources :projects
-
 resources :rewards do
   resources :pledges, only: [:new, :create]
 end
