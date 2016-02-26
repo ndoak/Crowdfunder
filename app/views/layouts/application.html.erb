@@ -3,29 +3,46 @@
 <head>
   <title>Crowdfunder</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <!-- <link href='https://fonts.googleapis.com/css?family=Dosis:800' rel='stylesheet' type='text/css'>
-  <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'> -->
+  <link href='https://fonts.googleapis.com/css?family=Dosis:800' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:600,400' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
-  <% if flash[:notice] %>
-    <p id="notice"><%=flash[:notice] %></p>
-  <% end %>
-  <% if flash[:alert] %>
-    <p id="alert"><%=flash[:alert] %></p>
-  <% end %>
+  <div class="page-wrapper">
+    <header id="header">
+    <h2><div class="crowd">CROWD</div><div class="funder">FUNDER</div></h2>
 
-  <div class="userinfo">
-    <% if current_user %>
-    Signed in as <%= current_user.email %>. <%= link_to 'Log out',
-      new_session_path('current'), :method => :delete %>
-    <% else %>
-      <%= link_to 'Log in', new_session_path %> or <%= link_to 'Sign up',
-        new_user_path %>
-    <% end %>
-  </div>
+    <nav id="main-menu">
+    <ul>
+      <li><%= link_to 'Discover', projects_path %></li>
+      <li><%= link_to 'Start a Project', new_project_path %></li>
+      <li><%= link_to 'Profile', user_path('current') %></li>
+    </ul>
+  </nav>
+    <div id="log-in">
+  <% if current_user %>
+           <%= link_to 'Log out', new_session_path('current'), :method => :delete %>
+        <% else %>
+          <%= link_to 'Log in', new_session_path %> <p> -or- </p> <%= link_to 'Sign up', new_user_path %>
+        <% end %>
+
+    </div>
+  </header>
+    <div class="content">
+      <% if flash[:notice] %>
+        <p id="notice"><%=flash[:notice] %></p>
+      <% end %>
+      <% if flash[:alert] %>
+        <p id="alert"><%=flash[:alert] %></p>
+      <% end %>
+
 <%= yield %>
-
+    </div>
+  <div id = "footer">
+    <p><div class="crowd-footer">CROWD</div><div class="funder-footer">FUNDER</div></p>
+    <p class="copyright">&copy; GitHer, 2015</p>
+  </div><!--end footer-->
+  </div><!--end page-wrapper-->
 </body>
 </html>

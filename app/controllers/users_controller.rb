@@ -4,9 +4,12 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @owned_projects = @user.owned_projects
+<<<<<<< HEAD
     @user_backedprojects = @user.backed_projects
     @total_pleged = @user.pledges.sum(:amount)
 
+=======
+>>>>>>> 284ccdf8b2e2064477669fd2e45c6ac51c63b186
 
   end
 
@@ -18,7 +21,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
-      redirect_to(:users, notice: 'User was sucessfully created')
+      redirect_to(:projects)
     else
       render "new"
     end
