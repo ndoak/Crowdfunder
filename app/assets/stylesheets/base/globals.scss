@@ -251,9 +251,15 @@ html{
 	padding-right: 2.5rem;
 	padding-top: 1.2rem;
 }
+<<<<<<< HEAD
 .user-profile{
   margin-left: 15%;
   width: 70%;
+=======
+
+.project-show-page{
+  margin-left: 32.5%;
+  width: 35%;
   border-style: solid;
   border-width: 1px;
   border-color: #abaeae;
@@ -263,6 +269,10 @@ html{
 
 }
 .user-profile h1{
+
+}
+
+.project-show-page h2{
   font-family: 'Open Sans';
   color: #2bde73;
   text-align: center;
@@ -278,6 +288,43 @@ html{
 }
 
 .user-profile a, .user-profile a:visited{
+#user-email{
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  color: #0f2105;
+  text-align: center;
+}
+
+.project-show-page p{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+  text-align: center;
+  padding-bottom: 5%;
+
+}
+
+.project-show-page h3{
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+.project-show-page input.donate{
+  width:70%;
+  text-align: center;
+  font-family: 'Open Sans';
+  border-style: none;
+  background-color: #2bde73;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 17.5%;
+  margin-bottom: 5%;
+}
+
+.project-show-page a, .project-show-page a:visited{
   text-decoration: none;
   font-family: 'Open Sans';
   font-size: 1rem;
@@ -286,5 +333,80 @@ html{
 }
 
 .user-profile a:hover{
-  color: #abaeae;  
+  color: #abaeae;
+  padding-left: 35%;
+}
+
+.project-show-page a:hover{
+  color: #abaeae;
+}
+
+.sign-in h2{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: black;
+  padding-left: 5%;
+
+}
+
+.sign-in a, .sign-in a:visited{
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+  padding-left: 5%;
+}
+
+.sign-in a:hover{
+  color: #abaeae;
+}
+
+.sign-in textarea{
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  width: 70%;
+
+}
+
+.field input{
+  width:70%;
+  text-align: center;
+  font-family: 'Open Sans';
+  border-style: none;
+  background-color: #2bde73;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 17.5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+.nested-fields h3{
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #00a0ff;
+  padding-left: 5%;
+}
+
+.nested-fields label{
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+.nested-fields input{
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  height:25px;
+  width: 70%;
+  background-color: white;
+  color:black;
 }
