@@ -1,3 +1,4 @@
+<div class="user-profile">
 <h1>Welcome to Your Profile Page</h1>
 
   <% @user.owned_projects.each do |project| %>
@@ -14,3 +15,4 @@
 <p><% @owned_projects.each do |project| %>
   <%= "You owned #{project.title}" %>
 <% end %> </p>
+</div>

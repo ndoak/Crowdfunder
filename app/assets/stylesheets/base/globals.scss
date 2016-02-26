@@ -251,3 +251,40 @@ html{
 	padding-right: 2.5rem;
 	padding-top: 1.2rem;
 }
+.user-profile{
+  margin-left: 15%;
+  width: 70%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 5%;
+
+}
+.user-profile h1{
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+.user-profile p{
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #0f2105;
+  text-align: center;
+
+}
+
+.user-profile a, .user-profile a:visited{
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+  margin-left: 43%;
+}
+
+.user-profile a:hover{
+  color: #abaeae;  
+}
