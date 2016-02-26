@@ -1,5 +1,5 @@
 <h1>Projects</h1>
-
+<%= link_to 'Profile Page', user_path(current_user)%>
 <% if can? :create, Project %>
   <%= link_to 'New Project', new_project_path %>
 <% end %>

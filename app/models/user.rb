@@ -2,8 +2,9 @@ class User < ActiveRecord::Base
   authenticates_with_sorcery!
   has_many :pledges
   has_many :owned_projects, class_name: 'Project'
-  has_many :backed_projects, class_name: 'Project', through: :rewards
-  has_many :pledges
+  has_many :backed_projects, class_name: 'Project', through: :reward
+  has_many :rewards
+
 
   validates :password, confirmation: true
   validates :email, confirmation: true
