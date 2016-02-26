@@ -28,6 +28,18 @@
 
 <h1>Projects you own</h1>
 <p><% @user.owned_projects.each do |project| %>
+
+  <% if @project.present? && @project == project %>
+    <div class="errors">
+      <h2>Can't delete</h2>
+      <ul>
+        <% @project.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
   <p><%= "You owned #{project.title}" %>  <%= link_to "Delete", project_path(project), method: :delete, data:
   {confirm: 'Are you sure you want to delete this project?'}%> </p>
 <% end %> </p>
