@@ -28,7 +28,7 @@ class ProjectsController < ApplicationController
   def show
     @project = Project.find(params[:id])
     @user_project = User.find(@project.user_id)
-
+    @user = current_user
     @project.project_expire()
     @project.money_raised()
   end
