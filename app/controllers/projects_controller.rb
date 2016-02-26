@@ -13,17 +13,24 @@ class ProjectsController < ApplicationController
 
   def create
     @project = Project.new(project_params)
+    @project.owner = current_user
     authorize! :manage, @project
-
     if @project.save
       redirect_to projects_path, notice: "Project Saved!"
     else
+      flash[:notice] = "Did you fill out EVERYTHING?"
       render :new
     end
+
+
   end
 
   def show
     @project = Project.find(params[:id])
+    @user_project = User.find(@project.user_id)
+
+    expire = @project.project_expire()
+    money_rasied
   end
 
   def edit
@@ -36,9 +43,10 @@ class ProjectsController < ApplicationController
   end
 
   def donate
+    @reward.user_id = current_user
     @project = Project.find(params[:id])
-    reward = Reward.find(params[:reward_id])
-    @project.update_funding_goal(@project.funding_goal, reward.amount)
+    @reward = Reward.find(params[:reward_id])
+    @project.update_funding_goal(@project.funding_goal, @reward.amount)
     render partial: "funding_goal"
   end
 

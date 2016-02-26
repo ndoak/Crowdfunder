@@ -3,7 +3,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @project = Project.find(params[:id]).where(@user.id == @project.user_id)
 
   end
 
