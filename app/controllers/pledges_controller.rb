@@ -6,5 +6,6 @@ class PledgesController < ApplicationController
   end
 
   def create
+    # this where we will donate
   end
 end
