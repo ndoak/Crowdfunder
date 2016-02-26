@@ -1,5 +1,5 @@
 <% @categories.each do |category| %>
 <div id = category>
-  <%= link_to category.name, categories_path %>
+  <%= link_to image_tag(category.image), category_path(category) %>
 </div>
 <% end %>

@@ -40,7 +40,7 @@
     <%= f.date_field :end_date %>
   </div>
 
-  <div class = "field">
+  <div class = "sign-in-field">
     <%= f.label :category %>
     <%= f.collection_select(:category_id, Category.all, :id, :name, {:include_blank => "Please Select"})%>
   </div>

@@ -1,9 +1,9 @@
 <% if @projects.any? %>
   <ul>
     <% @projects.each do |project| %>
-      <li class = "project">
+      <p class = "project">
         <%= link_to project.title, project_path(project) %>
-      </li>
+      </p>
     <% end %>
   </ul>
 <% end %>

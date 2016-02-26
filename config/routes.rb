@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
-root 'users#index'
-resources :categories, only: [:index, :show] 
+root 'sessions#new'
+resources :categories, only: [:index, :show]
 resources :projects
 resources :rewards do
   resources :pledges, only: [:new, :create]

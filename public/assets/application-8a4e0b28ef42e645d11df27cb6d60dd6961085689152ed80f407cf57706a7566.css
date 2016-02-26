@@ -1,0 +1,1026 @@
+/* line 1, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+/* line 5, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 8, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.page-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 12, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.crowd {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.7rem;
+  display: inline-block;
+  padding-left: 2%;
+}
+
+/* line 18, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.funder {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.7rem;
+  color: #2bde73;
+  display: inline-block;
+}
+
+/* line 25, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: white;
+}
+
+/* line 33, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#main-menu ul {
+  list-style: none;
+  font-size: 1rem;
+  float: right;
+  margin-top: -5.5%;
+  margin-right: 50%;
+}
+
+/* line 41, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#main-menu li {
+  display: inline-block;
+  padding-right: 2.5rem;
+  padding-top: 1.2rem;
+}
+
+/* line 47, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#main-menu a, #main-menu a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #abaeae;
+}
+
+/* line 55, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#main-menu a:hover {
+  color: #2bde73;
+}
+
+/* line 59, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#log-in {
+  clear: right;
+  float: right;
+  display: inline-block;
+  margin-top: -4%;
+  margin-right: 2%;
+}
+
+/* line 68, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#log-in p {
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #abaeae;
+  display: inline-block;
+}
+
+/* line 74, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#log-in a, #log-in a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+}
+
+/* line 82, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#log-in a:hover {
+  color: #abaeae;
+}
+
+/* line 86, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.content {
+  background-color: #f7fafa;
+  padding-top: 10%;
+  padding-bottom: 7%;
+}
+
+/* line 92, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in {
+  margin-left: 32.5%;
+  width: 35%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 5%;
+}
+
+/* line 103, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in h1 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: black;
+  padding-left: 5%;
+}
+
+/* line 111, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in-field {
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
+/* line 116, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in-field label {
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 123, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in-field input {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  height: 25px;
+  width: 70%;
+}
+
+/* line 133, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in-action input {
+  width: 70%;
+  text-align: center;
+  font-family: 'Open Sans';
+  border-style: none;
+  background-color: #2bde73;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 17.5%;
+}
+
+/* line 145, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#footer {
+  position: absolute;
+  background-color: #0f2105;
+  width: 100%;
+}
+
+/* line 151, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.crowd-footer {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.4rem;
+  display: inline-block;
+  padding-left: 2%;
+  color: white;
+}
+
+/* line 158, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.funder-footer {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.4rem;
+  color: #2bde73;
+  display: inline-block;
+  padding-top: 1.5%;
+}
+
+/* line 166, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.copyright {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: white;
+  font-size: 0.8rem;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  float: right;
+}
+
+/* line 176, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-field {
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
+/* line 181, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-field label {
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 188, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-field input {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  height: 25px;
+  width: 50%;
+}
+
+/* line 198, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-confirm-field {
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
+/* line 203, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-confirm-field label {
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 210, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-confirm-field input {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  height: 25px;
+  width: 50%;
+}
+
+/* line 220, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.checkbox {
+  padding-left: 7%;
+  padding-bottom: 10%;
+}
+
+/* line 225, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.checkbox label {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 231, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#checkbox-tag {
+  padding-left: 5%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 238, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.error_messages h2 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  padding-left: 5%;
+}
+
+/* line 244, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.error_messages ul {
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  color: #0f2105;
+}
+
+/* line 251, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.error_messages li {
+  padding-right: 2.5rem;
+  padding-top: 1.2rem;
+}
+
+/* line 256, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile {
+  margin-left: 15%;
+  width: 70%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 5%;
+}
+
+/* line 268, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page {
+  margin-left: 32.5%;
+  width: 35%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 5%;
+}
+
+/* line 279, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile h1 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+/* line 285, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile h2 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+/* line 291, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile ul {
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  color: #0f2105;
+}
+
+/* line 298, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile li {
+  text-align: center;
+  padding-right: 5%;
+}
+
+/* line 303, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page h2 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+/* line 309, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile p {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #0f2105;
+  text-align: center;
+}
+
+/* line 317, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile a, .user-profile a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+  margin-left: 45%;
+}
+
+/* line 325, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#user-email {
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  color: #0f2105;
+  text-align: center;
+}
+
+/* line 333, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page p {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+/* line 342, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page h3 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+/* line 348, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page input.donate {
+  width: 70%;
+  text-align: center;
+  font-family: 'Open Sans';
+  border-style: none;
+  background-color: #2bde73;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 17.5%;
+  margin-bottom: 5%;
+}
+
+/* line 361, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page a, .project-show-page a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+  margin-left: 43%;
+}
+
+/* line 369, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile a:hover {
+  color: #abaeae;
+  padding-left: 35%;
+}
+
+/* line 374, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page a:hover {
+  color: #abaeae;
+}
+
+/* line 378, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in h2 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: black;
+  padding-left: 5%;
+}
+
+/* line 386, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in a, .sign-in a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+  padding-left: 5%;
+}
+
+/* line 394, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in a:hover {
+  color: #abaeae;
+}
+
+/* line 398, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in textarea {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  width: 70%;
+}
+
+/* line 408, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.field input {
+  width: 70%;
+  text-align: center;
+  font-family: 'Open Sans';
+  border-style: none;
+  background-color: #2bde73;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 17.5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+/* line 422, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.nested-fields h3 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #00a0ff;
+  padding-left: 5%;
+}
+
+/* line 429, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.nested-fields label {
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 436, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.nested-fields input {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  height: 25px;
+  width: 70%;
+  background-color: white;
+  color: black;
+}
+/* line 1, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+html {
+  box-sizing: border-box;
+  font-size: 100%;
+}
+
+/* line 5, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* line 8, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.page-wrapper {
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* line 12, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.crowd {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.7rem;
+  display: inline-block;
+  padding-left: 2%;
+}
+
+/* line 18, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.funder {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.7rem;
+  color: #2bde73;
+  display: inline-block;
+}
+
+/* line 25, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#header {
+  top: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+  background-color: white;
+}
+
+/* line 33, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#main-menu ul {
+  list-style: none;
+  font-size: 1rem;
+  float: right;
+  margin-top: -5.5%;
+  margin-right: 50%;
+}
+
+/* line 41, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#main-menu li {
+  display: inline-block;
+  padding-right: 2.5rem;
+  padding-top: 1.2rem;
+}
+
+/* line 47, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#main-menu a, #main-menu a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #abaeae;
+}
+
+/* line 55, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#main-menu a:hover {
+  color: #2bde73;
+}
+
+/* line 59, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#log-in {
+  clear: right;
+  float: right;
+  display: inline-block;
+  margin-top: -4%;
+  margin-right: 2%;
+}
+
+/* line 68, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#log-in p {
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #abaeae;
+  display: inline-block;
+}
+
+/* line 74, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#log-in a, #log-in a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+}
+
+/* line 82, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#log-in a:hover {
+  color: #abaeae;
+}
+
+/* line 86, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.content {
+  background-color: #f7fafa;
+  padding-top: 10%;
+  padding-bottom: 7%;
+}
+
+/* line 92, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in {
+  margin-left: 32.5%;
+  width: 35%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 5%;
+}
+
+/* line 103, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in h1 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: black;
+  padding-left: 5%;
+}
+
+/* line 111, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in-field {
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
+/* line 116, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in-field label {
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 123, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in-field input {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  height: 25px;
+  width: 70%;
+}
+
+/* line 133, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in-action input {
+  width: 70%;
+  text-align: center;
+  font-family: 'Open Sans';
+  border-style: none;
+  background-color: #2bde73;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 17.5%;
+}
+
+/* line 145, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#footer {
+  position: absolute;
+  background-color: #0f2105;
+  width: 100%;
+}
+
+/* line 151, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.crowd-footer {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.4rem;
+  display: inline-block;
+  padding-left: 2%;
+  color: white;
+}
+
+/* line 158, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.funder-footer {
+  font-family: 'Dosis', sans-serif;
+  font-size: 1.4rem;
+  color: #2bde73;
+  display: inline-block;
+  padding-top: 1.5%;
+}
+
+/* line 166, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.copyright {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: white;
+  font-size: 0.8rem;
+  padding-right: 2%;
+  padding-bottom: 2%;
+  float: right;
+}
+
+/* line 176, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-field {
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
+/* line 181, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-field label {
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 188, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-field input {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  height: 25px;
+  width: 50%;
+}
+
+/* line 198, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-confirm-field {
+  padding-left: 5%;
+  padding-bottom: 5%;
+}
+
+/* line 203, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-confirm-field label {
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 210, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-up-confirm-field input {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  height: 25px;
+  width: 50%;
+}
+
+/* line 220, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.checkbox {
+  padding-left: 7%;
+  padding-bottom: 10%;
+}
+
+/* line 225, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.checkbox label {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 231, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#checkbox-tag {
+  padding-left: 5%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 238, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.error_messages h2 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  padding-left: 5%;
+}
+
+/* line 244, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.error_messages ul {
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  color: #0f2105;
+}
+
+/* line 251, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.error_messages li {
+  padding-right: 2.5rem;
+  padding-top: 1.2rem;
+}
+
+/* line 256, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile {
+  margin-left: 15%;
+  width: 70%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 5%;
+}
+
+/* line 268, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page {
+  margin-left: 32.5%;
+  width: 35%;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 10px;
+  background-color: white;
+  padding-bottom: 5%;
+}
+
+/* line 279, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile h1 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+/* line 285, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile h2 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+/* line 291, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile ul {
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  color: #0f2105;
+}
+
+/* line 298, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile li {
+  text-align: center;
+  padding-right: 5%;
+}
+
+/* line 303, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page h2 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+/* line 309, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile p {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #0f2105;
+  text-align: center;
+}
+
+/* line 317, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile a, .user-profile a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+  margin-left: 45%;
+}
+
+/* line 325, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+#user-email {
+  list-style: none;
+  font-size: 1rem;
+  font-family: 'Open Sans';
+  color: #0f2105;
+  text-align: center;
+}
+
+/* line 333, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page p {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+  text-align: center;
+  padding-bottom: 5%;
+}
+
+/* line 342, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page h3 {
+  font-family: 'Open Sans';
+  color: #2bde73;
+  text-align: center;
+}
+
+/* line 348, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page input.donate {
+  width: 70%;
+  text-align: center;
+  font-family: 'Open Sans';
+  border-style: none;
+  background-color: #2bde73;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 17.5%;
+  margin-bottom: 5%;
+}
+
+/* line 361, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page a, .project-show-page a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+  margin-left: 43%;
+}
+
+/* line 369, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.user-profile a:hover {
+  color: #abaeae;
+  padding-left: 35%;
+}
+
+/* line 374, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.project-show-page a:hover {
+  color: #abaeae;
+}
+
+/* line 378, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in h2 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: black;
+  padding-left: 5%;
+}
+
+/* line 386, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in a, .sign-in a:visited {
+  text-decoration: none;
+  font-family: 'Open Sans';
+  font-size: 1rem;
+  color: #00a0ff;
+  padding-left: 5%;
+}
+
+/* line 394, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in a:hover {
+  color: #abaeae;
+}
+
+/* line 398, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.sign-in textarea {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  width: 70%;
+}
+
+/* line 408, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.field input {
+  width: 70%;
+  text-align: center;
+  font-family: 'Open Sans';
+  border-style: none;
+  background-color: #2bde73;
+  color: white;
+  border-radius: 5px;
+  font-size: 1rem;
+  margin-left: 17.5%;
+  margin-bottom: 5%;
+  margin-top: 5%;
+}
+
+/* line 422, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.nested-fields h3 {
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #00a0ff;
+  padding-left: 5%;
+}
+
+/* line 429, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.nested-fields label {
+  padding-right: 2%;
+  font-family: 'Open Sans';
+  font-weight: 400;
+  color: #abaeae;
+}
+
+/* line 436, /Users/mirandagagnon/Desktop/Crowdfunder/app/assets/stylesheets/base/globals.scss */
+.nested-fields input {
+  border-style: none;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #abaeae;
+  border-radius: 5px;
+  height: 25px;
+  width: 70%;
+  background-color: white;
+  color: black;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+
+
+
+ */
+ /*@import "bourbon";
+ @import "neat";*/
+
