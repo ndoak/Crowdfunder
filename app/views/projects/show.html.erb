@@ -1,5 +1,10 @@
 <div class="project-show-page">
 
+  <% if @user.backed_projects.include? @project %>
+    <p>You've already backed this project</p>
+  <% else %>
+  <% end %>
+
   <% if @project.errors.any? %>
     <div class="error_messages">
       <h2>Project Is Over</h2>
