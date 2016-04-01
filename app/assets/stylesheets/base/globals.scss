@@ -141,11 +141,20 @@ html{
   font-size: 1rem;
   margin-left: 17.5%;
 }
-
+//
 #footer{
   position: absolute;
   background-color: #0f2105;
   width: 100%;
+  bottom:0;
+  margin-left:0;
+  position:fixed;
+  height: 60px;
+}
+
+
+body {
+  margin:0;
 }
 
 .crowd-footer{
